@@ -44,7 +44,7 @@
             //=================================================
             //VM framework code, do not need to chang the following code in most cases
             $vm.root_layout_content_slot='content'
-            $vm.api_address="http://172.17.213.124:8060";
+            $vm.api_address="https://woolcock-lab-database.vmiis.com:8060";
             //$vm.api_address="http://192.168.0.228:"+window.location.port;
             if(window.location.hostname=='127.0.0.1' || window.location.hostname=='localhost'){ 
                 $vm.localhost=true;
@@ -103,7 +103,7 @@
             }
             //---------------------------------------------
             $vm.get_module_list=function(){
-                var url="/module-list.js";
+                var url="/modules/module-list.js";
                 var ver=localStorage.getItem($vm.hosting_path+url+"ver");
                 var txt=localStorage.getItem($vm.hosting_path+url+"txt");
                 if(ver!=$vm.ver[0] || txt==null || $vm.localhost==true){
